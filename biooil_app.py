@@ -9,8 +9,8 @@ scaler = joblib.load('scaler.pkl')
 # Streamlit app
 st.title("Bio-oil Yield Prediction")
 
-temp = st.slider("Temperature (°C)", min_value=200, max_value=600, step=10)
-time = st.slider("Time (seconds)", min_value=5, max_value=30, step=1)
+temp = st.slider("Microwave Power (W)", min_value=100, max_value=900, step=10)
+time = st.slider("Time (minutes)", min_value=5, max_value=30, step=1)
 
 if st.button("Predict"):
     input_data = np.array([[temp, time]])
